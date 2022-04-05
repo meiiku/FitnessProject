@@ -8,11 +8,14 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class MainScreenController: UIViewController {
 
+    override func loadView() {
+        self.view = MainScreenView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
     }
 }
 
