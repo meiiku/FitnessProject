@@ -12,12 +12,7 @@ class MainScreenView: UIView {
     
     // MARK: - UI Elements
     
-    private lazy var calendarBackground: UIView = {
-        let view = UIView()
-        view.backgroundColor = Constants.primaryColor
-        view.layer.cornerRadius = 10
-        return view
-    }()
+    private let calendarBackground = CalendarView()
     
     private lazy var avatar: UIImageView = {
         let image = UIImageView()
