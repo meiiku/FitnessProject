@@ -12,8 +12,6 @@ class MainScreenView: UIView {
     
     // MARK: - UI Elements
     
-    private let calendarBackground = CalendarView()
-    
     private lazy var avatar: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = Constants.grayColor
@@ -30,7 +28,7 @@ class MainScreenView: UIView {
         label.minimumScaleFactor = 0.5
         return label
     }()
-
+    
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = Constants.secondaryColor
@@ -52,44 +50,45 @@ class MainScreenView: UIView {
         return button
     }()
     
-    private lazy var weatherStatusBackground: UIView = {
-        let view = UIView()
-        view.backgroundColor = Constants.whiteColor
-        view.layer.cornerRadius = 10
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.15
-        view.layer.shadowRadius = 4
-        view.layer.shadowOffset = CGSize(width: 0, height: 5)
-        return view
-    }()
+    //    private lazy var weatherStatusBackground: UIView = {
+    //        let view = UIView()
+    //        view.backgroundColor = Constants.whiteColor
+    //        view.layer.cornerRadius = 10
+    //        view.layer.shadowColor = UIColor.black.cgColor
+    //        view.layer.shadowOpacity = 0.15
+    //        view.layer.shadowRadius = 4
+    //        view.layer.shadowOffset = CGSize(width: 0, height: 5)
+    //        return view
+    //    }()
+    //
+    //    private lazy var weatherStatusLabel: UILabel = {
+    //        let label = UILabel()
+    //        label.text = "Солнечно"
+    //        label.font = UIFont.systemFont(ofSize: 18)
+    //        label.adjustsFontSizeToFitWidth = true
+    ////        label.backgroundColor = .blue
+    //        return label
+    //    }()
+    //
+    //    private lazy var weatherAdvice: UILabel = {
+    //        let label = UILabel()
+    //        label.text = "Хорошая погода, чтобы позаниматься на улице"
+    //        label.font = UIFont.systemFont(ofSize: 13)
+    //        label.textColor = Constants.grayColor
+    //        label.numberOfLines = 2
+    //        label.lineBreakMode = .byWordWrapping
+    ////        label.backgroundColor = .red
+    //        return label
+    //    }()
+    //
+    //    private lazy var weatherIcon: UIImageView = {
+    //        let image = UIImageView()
+    //        image.image = UIImage(named: "WeatherIcon_Sun")
+    //        return image
+    //    }()
     
-    private lazy var weatherStatusLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Солнечно"
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.adjustsFontSizeToFitWidth = true
-//        label.backgroundColor = .blue
-        return label
-    }()
-    
-    private lazy var weatherAdvice: UILabel = {
-        let label = UILabel()
-        label.text = "Хорошая погода, чтобы позаниматься на улице"
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = Constants.grayColor
-        label.numberOfLines = 2
-        label.lineBreakMode = .byWordWrapping
-//        label.backgroundColor = .red
-        return label
-    }()
-    
-    private lazy var weatherIcon: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "WeatherIcon_Sun")
-        return image
-    }()
-    
-    private let testButton = CustomButton(text: "test", color: .yellow)
+    private let calendarView = CalendarView()
+    private let weatherView = WeatherView()
     
     // MARK: - init
     
@@ -123,29 +122,17 @@ extension MainScreenView {
     
     private func setupViews() {
         self.backgroundColor = Constants.backgroundColor
-        self.addSubview(calendarBackground)
+        self.addSubview(calendarView)
         self.addSubview(avatar)
         self.addSubview(userNameLabel)
         self.addSubview(addWorkoutButton)
-        self.addSubview(weatherStatusBackground)
-        
-        weatherStatusBackground.addSubview(weatherStatusLabel)
-        weatherStatusBackground.addSubview(weatherAdvice)
-        weatherStatusBackground.addSubview(weatherIcon)
-        
-        self.addSubview(testButton)
+        self.addSubview(weatherView)
     }
     
     private func setupConstraints() {
         
-        // button
-        testButton.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.size.equalTo(200)
-        }
-        
         // calendar
-        calendarBackground.snp.makeConstraints { make in
+        calendarView.snp.makeConstraints { make in
             make.width.equalTo(self.layoutMarginsGuide.snp.width)
             make.height.equalTo(69)
             make.centerX.equalToSuperview()
@@ -156,50 +143,28 @@ extension MainScreenView {
         avatar.snp.makeConstraints { make in
             make.size.equalTo(100)
             make.left.equalTo(self.layoutMarginsGuide.snp.left)
-            make.centerY.equalTo(calendarBackground.snp.top)
+            make.centerY.equalTo(calendarView.snp.top)
         }
         
         // user name
         userNameLabel.snp.makeConstraints { make in
             make.left.equalTo(avatar.snp.right).offset(6)
-            make.bottom.equalTo(calendarBackground.snp.top).offset(-6)
+            make.bottom.equalTo(calendarView.snp.top).offset(-6)
         }
         
         // addWorkout button
         addWorkoutButton.snp.makeConstraints { make in
             make.size.equalTo(80)
             make.left.equalTo(self.layoutMarginsGuide.snp.left)
-            make.top.equalTo(calendarBackground.snp.bottom).offset(6)
+            make.top.equalTo(calendarView.snp.bottom).offset(6)
         }
         
-        // background for weather status
-        weatherStatusBackground.snp.makeConstraints { make in
+        // weather view
+        weatherView.snp.makeConstraints { make in
             make.height.equalTo(addWorkoutButton)
             make.right.equalTo(self.layoutMarginsGuide.snp.right)
             make.left.equalTo(addWorkoutButton.snp.right).offset(10)
             make.top.equalTo(addWorkoutButton)
-        }
-        
-        // status of weather
-        weatherStatusLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(8)
-            make.bottom.equalToSuperview().offset(-48)
-            make.left.equalToSuperview().offset(10)
-        }
-        
-        // weather advice
-        weatherAdvice.snp.makeConstraints { make in
-            make.top.equalTo(weatherStatusLabel.snp.bottom).offset(-4)
-            make.bottom.equalToSuperview().offset(-5)
-            make.left.equalToSuperview().offset(10)
-            make.right.equalTo(weatherIcon.snp.left)
-        }
-        
-        // weather icon
-        weatherIcon.snp.makeConstraints { make in
-            make.size.equalTo(62)
-            make.centerY.equalToSuperview()
-            make.right.equalToSuperview().offset(-10)
         }
     }
 }

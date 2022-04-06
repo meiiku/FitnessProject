@@ -21,7 +21,7 @@ class CustomButton: UIButton {
             }
         }
         
-        fileprivate func getButtonTextColor() -> UIColor{
+        fileprivate func getButtonTextColor() -> UIColor {
             switch self {
             case .green: return Constants.whiteColor
             case .yellow: return UIColor(red: 81, green: 81, blue: 80, alpha: 1)
