@@ -89,6 +89,8 @@ class MainScreenView: UIView {
         return image
     }()
     
+    private let testButton = CustomButton(text: "test", color: .yellow)
+    
     // MARK: - init
     
     override func layoutSubviews() {
@@ -130,9 +132,17 @@ extension MainScreenView {
         weatherStatusBackground.addSubview(weatherStatusLabel)
         weatherStatusBackground.addSubview(weatherAdvice)
         weatherStatusBackground.addSubview(weatherIcon)
+        
+        self.addSubview(testButton)
     }
     
     private func setupConstraints() {
+        
+        // button
+        testButton.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(200)
+        }
         
         // calendar
         calendarBackground.snp.makeConstraints { make in
