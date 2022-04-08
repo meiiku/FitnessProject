@@ -83,7 +83,7 @@ class MainScreenView: UIView {
     }
 }
 
-// MARK: - Constraints
+// MARK: - setup, constraints
 
 extension MainScreenView {
     
