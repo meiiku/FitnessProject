@@ -9,6 +9,16 @@ import UIKit
 
 class CalendarView: UIView {
     
+    // collection
+    private var collectionView: UICollectionView = {
+        let layout = UICollectionViewLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundView = .none
+        
+        
+        return collectionView
+    }()
+    
     // MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)

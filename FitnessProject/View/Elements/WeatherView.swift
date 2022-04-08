@@ -14,16 +14,16 @@ class WeatherView: UIView {
     private lazy var weatherStatusLabel: UILabel = {
         let label = UILabel()
         label.text = "Солнечно"
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = .robotoMedium18()
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
-    private lazy var weatherAdvice: UILabel = {
+    private lazy var weatherDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Хорошая погода, чтобы позаниматься на улице"
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = Constants.grayColor
+        label.text = "Хорошая пог ода, чтобы позаниматься на улице"
+        label.font = .robotoMedium12()
+        label.textColor = Constants.lightGray
         label.numberOfLines = 2
         label.lineBreakMode = .byWordWrapping
         return label
@@ -54,13 +54,15 @@ extension WeatherView {
     private func setupViews() {
         self.backgroundColor = Constants.whiteColor
         self.layer.cornerRadius = 10
+        
+        // shadow
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.15
         self.layer.shadowRadius = 4
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
         
         self.addSubview(weatherStatusLabel)
-        self.addSubview(weatherAdvice)
+        self.addSubview(weatherDescriptionLabel)
         self.addSubview(weatherIcon)
     }
     
@@ -74,7 +76,7 @@ extension WeatherView {
         }
         
         // weather advice
-        weatherAdvice.snp.makeConstraints { make in
+        weatherDescriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(weatherStatusLabel.snp.bottom).offset(-4)
             make.bottom.equalToSuperview().offset(-5)
             make.left.equalToSuperview().offset(10)

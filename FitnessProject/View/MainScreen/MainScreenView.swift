@@ -14,7 +14,7 @@ class MainScreenView: UIView {
     
     private lazy var avatar: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = Constants.grayColor
+        image.backgroundColor = Constants.lightGray
         image.layer.borderColor = Constants.whiteColor.cgColor
         image.layer.borderWidth = 5
         return image
@@ -23,7 +23,8 @@ class MainScreenView: UIView {
     private lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "User name"
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.font = .robotoMedium24()
+        label.textColor = Constants.textColor
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         return label
@@ -34,7 +35,10 @@ class MainScreenView: UIView {
         button.backgroundColor = Constants.secondaryColor
         button.layer.cornerRadius = 10
         button.setTitle("Add workout", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.titleLabel?.font = .robotoMedium12()
+        button.titleLabel?.textColor = Constants.textColor
+        
+        // image
         button.setImage(UIImage(named: "addWorkout"), for: .normal)
         button.tintColor = Constants.secondaryColor
         button.imageEdgeInsets = UIEdgeInsets(top: -5, left: 20, bottom: 10, right: 0)
@@ -49,43 +53,6 @@ class MainScreenView: UIView {
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         return button
     }()
-    
-    //    private lazy var weatherStatusBackground: UIView = {
-    //        let view = UIView()
-    //        view.backgroundColor = Constants.whiteColor
-    //        view.layer.cornerRadius = 10
-    //        view.layer.shadowColor = UIColor.black.cgColor
-    //        view.layer.shadowOpacity = 0.15
-    //        view.layer.shadowRadius = 4
-    //        view.layer.shadowOffset = CGSize(width: 0, height: 5)
-    //        return view
-    //    }()
-    //
-    //    private lazy var weatherStatusLabel: UILabel = {
-    //        let label = UILabel()
-    //        label.text = "Солнечно"
-    //        label.font = UIFont.systemFont(ofSize: 18)
-    //        label.adjustsFontSizeToFitWidth = true
-    ////        label.backgroundColor = .blue
-    //        return label
-    //    }()
-    //
-    //    private lazy var weatherAdvice: UILabel = {
-    //        let label = UILabel()
-    //        label.text = "Хорошая погода, чтобы позаниматься на улице"
-    //        label.font = UIFont.systemFont(ofSize: 13)
-    //        label.textColor = Constants.grayColor
-    //        label.numberOfLines = 2
-    //        label.lineBreakMode = .byWordWrapping
-    ////        label.backgroundColor = .red
-    //        return label
-    //    }()
-    //
-    //    private lazy var weatherIcon: UIImageView = {
-    //        let image = UIImageView()
-    //        image.image = UIImage(named: "WeatherIcon_Sun")
-    //        return image
-    //    }()
     
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()

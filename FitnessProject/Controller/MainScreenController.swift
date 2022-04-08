@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class MainScreenController: UIViewController {
-
+    
     override func loadView() {
         self.view = MainScreenView()
     }
