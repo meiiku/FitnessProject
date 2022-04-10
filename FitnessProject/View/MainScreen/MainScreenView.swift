@@ -73,7 +73,6 @@ class MainScreenView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print(exercisesTable)
         
         setViews()
         setConstraints()
@@ -154,7 +153,7 @@ extension MainScreenView {
             make.top.equalTo(workoutTodayLabel.snp.bottom).offset(5)
             make.left.equalTo(self.layoutMarginsGuide.snp.left)
             make.right.equalTo(self.layoutMarginsGuide.snp.right)
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(self.layoutMarginsGuide.snp.bottom)
         }
     }
 }

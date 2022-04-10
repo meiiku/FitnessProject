@@ -2,12 +2,12 @@
 //  ExercisesTableView.swift
 //  FitnessProject
 //
-//  Created by Fedor on 10.04.2022.
+//  Created by Fedor on 11.04.2022.
 //
 
 import UIKit
 
-class ExercisesTableView: UIView {
+class StatisticsTableView: UIView {
 
     // MARK: - UI Elements
     
@@ -42,13 +42,14 @@ class ExercisesTableView: UIView {
         exercisesTableView.delegate = self
     }
 }
+
 // MARK: - Setup, constraints
 
-extension ExercisesTableView {
+extension StatisticsTableView {
     
     private func setViews() {
         self.addSubview(exercisesTableView)
-        exercisesTableView.register(ExerciseTableViewCell.self, forCellReuseIdentifier: idExerciseCell)
+        exercisesTableView.register(StatisticsTableViewCell.self, forCellReuseIdentifier: idExerciseCell)
     }
     
     func setConstraints() {
@@ -60,13 +61,13 @@ extension ExercisesTableView {
 
 // MARK: - UITableViewDataSource
 
-extension ExercisesTableView: UITableViewDataSource {
+extension StatisticsTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = exercisesTableView.dequeueReusableCell(withIdentifier: idExerciseCell, for: indexPath) as? ExerciseTableViewCell else {
+        guard let cell = exercisesTableView.dequeueReusableCell(withIdentifier: idExerciseCell, for: indexPath) as? StatisticsTableViewCell else {
             return UITableViewCell()
         }
         return cell
@@ -75,9 +76,9 @@ extension ExercisesTableView: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension ExercisesTableView: UITableViewDelegate {
+extension StatisticsTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        70
     }
 }
