@@ -15,13 +15,14 @@ class WeatherView: UIView {
         let label = UILabel()
         label.text = "Солнечно"
         label.font = .robotoMedium18()
+        label.textColor = Constants.primaryLabelColor
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
     private lazy var weatherDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Хорошая пог ода, чтобы позаниматься на улице"
+        label.text = "Хорошая погода, чтобы позаниматься на улице"
         label.font = .robotoMedium12()
         label.textColor = Constants.lightGray
         label.numberOfLines = 2

@@ -24,7 +24,7 @@ class CustomButton: UIButton {
         fileprivate func getButtonTextColor() -> UIColor {
             switch self {
             case .green: return Constants.whiteColor
-            case .yellow: return UIColor(red: 81, green: 81, blue: 80, alpha: 1)
+            case .yellow: return Constants.darkGreen
             }
         }
     }
@@ -35,6 +35,9 @@ class CustomButton: UIButton {
         
         self.setTitle(text, for: .normal)
         self.setTitleColor(Colors.getButtonTextColor(color)(), for: .normal)
+        self.titleLabel?.font = .robotoBold16()
+        self.titleLabel?.textAlignment = .center
+        
         self.backgroundColor = Colors.getButtonBackgroundColor(color)()
         self.layer.cornerRadius = 10
     }

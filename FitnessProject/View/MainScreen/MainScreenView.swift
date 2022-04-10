@@ -24,7 +24,7 @@ class MainScreenView: UIView {
         let label = UILabel()
         label.text = "User name"
         label.font = .robotoMedium24()
-        label.textColor = Constants.textColor
+        label.textColor = Constants.primaryLabelColor
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         return label
@@ -36,8 +36,7 @@ class MainScreenView: UIView {
         button.layer.cornerRadius = 10
         button.setTitle("Add workout", for: .normal)
         button.titleLabel?.font = .robotoMedium12()
-        button.titleLabel?.textColor = Constants.textColor
-        
+        button.titleLabel?.textColor = .black
         // image
         button.setImage(UIImage(named: "addWorkout"), for: .normal)
         button.tintColor = Constants.secondaryColor
@@ -54,8 +53,15 @@ class MainScreenView: UIView {
         return button
     }()
     
+    private lazy var workoutTodayLabel: CustomLabel = {
+        let label = CustomLabel(text: "Workout today")
+        return label
+    }()
+    
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    private let exercisesTable = ExercisesTableView()
+    
     
     // MARK: - init
     
@@ -67,9 +73,10 @@ class MainScreenView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        print(exercisesTable)
         
-        setupViews()
-        setupConstraints()
+        setViews()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -87,16 +94,18 @@ class MainScreenView: UIView {
 
 extension MainScreenView {
     
-    private func setupViews() {
+    private func setViews() {
         self.backgroundColor = Constants.backgroundColor
         self.addSubview(calendarView)
         self.addSubview(avatar)
         self.addSubview(userNameLabel)
         self.addSubview(addWorkoutButton)
         self.addSubview(weatherView)
+        self.addSubview(workoutTodayLabel)
+        self.addSubview(exercisesTable)
     }
     
-    private func setupConstraints() {
+    private func setConstraints() {
         
         // calendar
         calendarView.snp.makeConstraints { make in
@@ -132,6 +141,20 @@ extension MainScreenView {
             make.right.equalTo(self.layoutMarginsGuide.snp.right)
             make.left.equalTo(addWorkoutButton.snp.right).offset(10)
             make.top.equalTo(addWorkoutButton)
+        }
+        
+        // workoutTodayLabel
+        workoutTodayLabel.snp.makeConstraints { make in
+            make.left.equalTo(self.layoutMarginsGuide.snp.left)
+            make.top.equalTo(addWorkoutButton.snp.bottom).offset(15)
+        }
+        
+        // table of exercises
+        exercisesTable.snp.makeConstraints { make in
+            make.top.equalTo(workoutTodayLabel.snp.bottom).offset(5)
+            make.left.equalTo(self.layoutMarginsGuide.snp.left)
+            make.right.equalTo(self.layoutMarginsGuide.snp.right)
+            make.bottom.equalToSuperview()
         }
     }
 }

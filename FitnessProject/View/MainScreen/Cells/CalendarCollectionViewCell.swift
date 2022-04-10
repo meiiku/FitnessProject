@@ -34,22 +34,40 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupViews()
-        setupConstraints()
+        setViews()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - setup, constraints
+    // MARK: - Methods
     
-    private func setupViews() {
+    // what is happening when cell is selected
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                self.backgroundColor = Constants.secondaryColor
+                dayOfWeek.textColor = Constants.primaryLabelColor
+                numberOfDay.textColor = Constants.primaryLabelColor
+            } else {
+                self.backgroundColor = .none
+                dayOfWeek.textColor = Constants.whiteColor
+                numberOfDay.textColor = Constants.whiteColor
+            }
+        }
+    }
+    
+    // MARK: - Setup, constraints
+    
+    private func setViews() {
+        self.layer.cornerRadius = 10
         self.addSubview(dayOfWeek)
         self.addSubview(numberOfDay)
     }
     
-    private func setupConstraints() {
+    private func setConstraints() {
         
         dayOfWeek.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

@@ -22,15 +22,16 @@ class CalendarView: UIView {
         return collectionView
     }()
     
-    let calendarCell = "calendarCell"
+    let idCalendarCell = "calendarCell"
+    
     
     // MARK: - init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupViews()
-        setupConstraints()
+        setViews()
+        setConstraints()
         setDelegates()
     }
     
@@ -44,19 +45,19 @@ class CalendarView: UIView {
     }
 }
 
-// MARK: - setup, constraints
+// MARK: - Setup, constraints
 
 extension CalendarView {
     
-    private func setupViews() {
+    private func setViews() {
         self.backgroundColor = Constants.primaryColor
         self.layer.cornerRadius = 10
         
         self.addSubview(collectionView)
-        collectionView.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: "calendarCell")
+        collectionView.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: idCalendarCell)
     }
     
-    private func setupConstraints() {
+    private func setConstraints() {
         
         // collection view
         collectionView.snp.makeConstraints { make in
@@ -76,8 +77,9 @@ extension CalendarView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "calendarCell", for: indexPath) as? CalendarCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idCalendarCell, for: indexPath) as? CalendarCollectionViewCell
         else { return UICollectionViewCell() }
+        self.layer.cornerRadius = 10
         
         return cell
     }
