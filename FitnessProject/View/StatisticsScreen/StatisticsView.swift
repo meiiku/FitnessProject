@@ -13,13 +13,9 @@ class StatisticsView: UIView {
     // MARK: - UI Elements
     
     // screen title
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
+    private lazy var titleLabel: CustomLabel = {
+        let label = CustomLabel(text: "STATISTICS", type: .title)
         label.text = "STATISTICS"
-        label.font = .robotoMedium24()
-        label.textColor = Constants.primaryLabelColor
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
         return label
     }()
 
@@ -37,7 +33,7 @@ class StatisticsView: UIView {
     }()
     
     private lazy var exersicesLabel: CustomLabel = {
-        let label = CustomLabel(text: "Exercises")
+        let label = CustomLabel(text: "Exercises", type: .comment)
         return label
     }()
     

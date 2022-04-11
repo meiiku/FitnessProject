@@ -22,20 +22,14 @@ class StatisticsTableViewCell: UITableViewCell {
     }()
     
     // repetitions of the exercise
-    private lazy var beforeLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Before: 20"
-        label.textColor = Constants.commentLabelColor
-        label.font = .robotoMedium16()
+    private lazy var beforeLabel: CustomLabel = {
+        let label = CustomLabel(text: "Before: 20", type: .comment)
         return label
     }()
     
     // sets of the exercise
-    private lazy var nowLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Now: 4"
-        label.textColor = Constants.commentLabelColor
-        label.font = .robotoMedium16()
+    private lazy var nowLabel: CustomLabel = {
+        let label = CustomLabel(text: "Now: 4", type: .comment)
         return label
     }()
     
@@ -106,7 +100,7 @@ extension StatisticsTableViewCell {
         // reps and sets
         labelsStackView.snp.makeConstraints { make in
             make.left.equalToSuperview()
-            make.centerY.equalToSuperview().offset(15)
+            make.centerY.equalToSuperview().offset(17)
         }
         
         // exercise separator

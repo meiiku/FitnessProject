@@ -54,7 +54,7 @@ class HomeScreenView: UIView {
     }()
     
     private lazy var workoutTodayLabel: CustomLabel = {
-        let label = CustomLabel(text: "Workout today")
+        let label = CustomLabel(text: "Workout today", type: .comment)
         return label
     }()
     
