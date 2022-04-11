@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MainScreenView: UIView {
+class HomeScreenView: UIView {
     
     // MARK: - UI Elements
     
@@ -91,7 +91,7 @@ class MainScreenView: UIView {
 
 // MARK: - setup, constraints
 
-extension MainScreenView {
+extension HomeScreenView {
     
     private func setViews() {
         self.backgroundColor = Constants.backgroundColor

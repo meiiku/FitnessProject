@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MainScreenController: UIViewController {
+class HomeScreenController: UIViewController {
     
     override func loadView() {
-        self.view = MainScreenView()
+        self.view = HomeScreenView()
     }
     
     override func viewDidLoad() {

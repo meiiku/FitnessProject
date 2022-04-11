@@ -10,7 +10,7 @@
 		64D83DD48A49230956563AA1 /* Pods_FitnessProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1F2A0BEFEB908ADFE3C3B4 /* Pods_FitnessProject.framework */; };
 		9F13204727FC8B6100688CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13204627FC8B6100688CB7 /* AppDelegate.swift */; };
 		9F13204927FC8B6100688CB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13204827FC8B6100688CB7 /* SceneDelegate.swift */; };
-		9F13204B27FC8B6100688CB7 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13204A27FC8B6100688CB7 /* MainScreenController.swift */; };
+		9F13204B27FC8B6100688CB7 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13204A27FC8B6100688CB7 /* HomeScreenController.swift */; };
 		9F13205027FC8B6100688CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F13204F27FC8B6100688CB7 /* Assets.xcassets */; };
 		9F13205327FC8B6100688CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F13205127FC8B6100688CB7 /* LaunchScreen.storyboard */; };
 		9F4F308D27FE1E2E009DAA10 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F308C27FE1E2E009DAA10 /* WeatherView.swift */; };
@@ -20,7 +20,8 @@
 		9F9FEE9C2800BAD5003A4781 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9FEE9A2800BAD5003A4781 /* Roboto-Medium.ttf */; };
 		9F9FEE9D2800BAD5003A4781 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9FEE9B2800BAD5003A4781 /* Roboto-Bold.ttf */; };
 		9F9FEEA02800BE74003A4781 /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FEE9F2800BE74003A4781 /* UIFont + Extensions.swift */; };
-		9FC75A6927FCA91100BE7BAC /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC75A6827FCA91100BE7BAC /* MainScreenView.swift */; };
+		9FB035A52804991E009436B4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB035A42804991E009436B4 /* MainTabBarController.swift */; };
+		9FC75A6927FCA91100BE7BAC /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */; };
 		9FC75A6B27FCA97400BE7BAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC75A6A27FCA97400BE7BAC /* Constants.swift */; };
 		9FD6E2CD28034CE00077E8CE /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6E2CC28034CE00077E8CE /* ExerciseTableViewCell.swift */; };
 		9FD6E2CF280352DB0077E8CE /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6E2CE280352DB0077E8CE /* UIStackView + Extensions.swift */; };
@@ -39,7 +40,7 @@
 		9F13204327FC8B6100688CB7 /* FitnessProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13204627FC8B6100688CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F13204827FC8B6100688CB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F13204A27FC8B6100688CB7 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		9F13204A27FC8B6100688CB7 /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		9F13204F27FC8B6100688CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F13205227FC8B6100688CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F13205427FC8B6100688CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +51,8 @@
 		9F9FEE9A2800BAD5003A4781 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		9F9FEE9B2800BAD5003A4781 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		9F9FEE9F2800BE74003A4781 /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
-		9FC75A6827FCA91100BE7BAC /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		9FB035A42804991E009436B4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		9FC75A6A27FCA97400BE7BAC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FD6E2CC28034CE00077E8CE /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		9FD6E2CE280352DB0077E8CE /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
@@ -125,7 +127,8 @@
 		9F13205A27FC8B8300688CB7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9F13204A27FC8B6100688CB7 /* MainScreenController.swift */,
+				9FB035A42804991E009436B4 /* MainTabBarController.swift */,
+				9F13204A27FC8B6100688CB7 /* HomeScreenController.swift */,
 				9FD6E2D028037A730077E8CE /* StatisticsViewController.swift */,
 			);
 			path = Controller;
@@ -172,7 +175,7 @@
 		9F4F308B27FE1E1A009DAA10 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9FC75A6827FCA91100BE7BAC /* MainScreenView.swift */,
+				9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */,
 				9F9B094A2800ED1A0055B15F /* Cells */,
 				9F9B09492800ECFA0055B15F /* Elements */,
 			);
@@ -374,15 +377,16 @@
 				9F9A369628030EB600126D89 /* CustomLabel.swift in Sources */,
 				9FC75A6B27FCA97400BE7BAC /* Constants.swift in Sources */,
 				9FD6E2D428037AD80077E8CE /* StatisticsView.swift in Sources */,
-				9F13204B27FC8B6100688CB7 /* MainScreenController.swift in Sources */,
+				9F13204B27FC8B6100688CB7 /* HomeScreenController.swift in Sources */,
 				9FD6E2D128037A730077E8CE /* StatisticsViewController.swift in Sources */,
 				9F9B094C2800ED6F0055B15F /* CalendarCollectionViewCell.swift in Sources */,
 				9FFD31E627FDCC9900ABDB77 /* CalendarView.swift in Sources */,
 				9FD6E2CD28034CE00077E8CE /* ExerciseTableViewCell.swift in Sources */,
 				9FD6E2CF280352DB0077E8CE /* UIStackView + Extensions.swift in Sources */,
+				9FB035A52804991E009436B4 /* MainTabBarController.swift in Sources */,
 				9F13204727FC8B6100688CB7 /* AppDelegate.swift in Sources */,
 				9F13204927FC8B6100688CB7 /* SceneDelegate.swift in Sources */,
-				9FC75A6927FCA91100BE7BAC /* MainScreenView.swift in Sources */,
+				9FC75A6927FCA91100BE7BAC /* HomeScreenView.swift in Sources */,
 				9F4F308D27FE1E2E009DAA10 /* WeatherView.swift in Sources */,
 				9FD6E2D7280381420077E8CE /* StatisticsTableView.swift in Sources */,
 			);
