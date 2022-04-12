@@ -32,7 +32,7 @@ class WeatherView: UIView {
     
     private lazy var weatherIcon: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "WeatherIcon_Sun")
+        image.image = UIImage(named: "weatherIcon_Sun")
         return image
     }()
     

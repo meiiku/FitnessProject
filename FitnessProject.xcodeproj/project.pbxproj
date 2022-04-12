@@ -29,6 +29,8 @@
 		9FD6E2D428037AD80077E8CE /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6E2D328037AD80077E8CE /* StatisticsView.swift */; };
 		9FD6E2D7280381420077E8CE /* StatisticsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6E2D6280381420077E8CE /* StatisticsTableView.swift */; };
 		9FD6E2DA280383240077E8CE /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6E2D9280383240077E8CE /* StatisticsTableViewCell.swift */; };
+		9FEA706D2805D0A500FDE176 /* UIView + Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA706C2805D0A500FDE176 /* UIView + Preview.swift */; };
+		9FEA706F2805D8D800FDE176 /* UITabBarController + Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA706E2805D8D800FDE176 /* UITabBarController + Preview.swift */; };
 		9FFD31E627FDCC9900ABDB77 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD31E527FDCC9900ABDB77 /* CalendarView.swift */; };
 		9FFD31EA27FDD31000ABDB77 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD31E927FDD31000ABDB77 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		9FD6E2D328037AD80077E8CE /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		9FD6E2D6280381420077E8CE /* StatisticsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableView.swift; sourceTree = "<group>"; };
 		9FD6E2D9280383240077E8CE /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		9FEA706C2805D0A500FDE176 /* UIView + Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Preview.swift"; sourceTree = "<group>"; };
+		9FEA706E2805D8D800FDE176 /* UITabBarController + Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController + Preview.swift"; sourceTree = "<group>"; };
 		9FFD31E527FDCC9900ABDB77 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		9FFD31E927FDD31000ABDB77 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +219,8 @@
 			children = (
 				9F9FEE9F2800BE74003A4781 /* UIFont + Extensions.swift */,
 				9FD6E2CE280352DB0077E8CE /* UIStackView + Extensions.swift */,
+				9FEA706C2805D0A500FDE176 /* UIView + Preview.swift */,
+				9FEA706E2805D8D800FDE176 /* UITabBarController + Preview.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				9FD6E2D428037AD80077E8CE /* StatisticsView.swift in Sources */,
 				9F13204B27FC8B6100688CB7 /* HomeScreenController.swift in Sources */,
 				9FD6E2D128037A730077E8CE /* StatisticsViewController.swift in Sources */,
+				9FEA706F2805D8D800FDE176 /* UITabBarController + Preview.swift in Sources */,
 				9F9B094C2800ED6F0055B15F /* CalendarCollectionViewCell.swift in Sources */,
 				9FFD31E627FDCC9900ABDB77 /* CalendarView.swift in Sources */,
 				9FD6E2CD28034CE00077E8CE /* ExerciseTableViewCell.swift in Sources */,
@@ -389,6 +396,7 @@
 				9FC75A6927FCA91100BE7BAC /* HomeScreenView.swift in Sources */,
 				9F4F308D27FE1E2E009DAA10 /* WeatherView.swift in Sources */,
 				9FD6E2D7280381420077E8CE /* StatisticsTableView.swift in Sources */,
+				9FEA706D2805D0A500FDE176 /* UIView + Preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

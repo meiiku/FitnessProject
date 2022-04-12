@@ -13,18 +13,19 @@ class StatisticsView: UIView {
     // MARK: - UI Elements
     
     // screen title
-    private lazy var titleLabel: CustomLabel = {
+    private lazy var screenTitleLabel: CustomLabel = {
         let label = CustomLabel(text: "STATISTICS", type: .title)
-        label.text = "STATISTICS"
         return label
     }()
 
     // segmented control
-    let items = ["Неделя", "Месяц"]
-    private lazy var segmentedControl: UISegmentedControl = {
+    private let items = ["Неделя", "Месяц"]
+    lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: items)
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.layer.cornerRadius = 9
+        
+        // colors
         segmentedControl.backgroundColor = Constants.primaryColor
         segmentedControl.selectedSegmentTintColor = Constants.secondaryColor
         segmentedControl.setTitleTextAttributes([.foregroundColor : Constants.primaryLabelColor], for: .selected)
@@ -60,7 +61,7 @@ extension StatisticsView {
     
     private func setViews() {
         self.backgroundColor = Constants.backgroundColor
-        self.addSubview(titleLabel)
+        self.addSubview(screenTitleLabel)
         self.addSubview(segmentedControl)
         self.addSubview(exersicesLabel)
         self.addSubview(statisticsTable)
@@ -69,7 +70,7 @@ extension StatisticsView {
     private func setConstraints() {
         
         // screen title
-        titleLabel.snp.makeConstraints { make in
+        screenTitleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(75)
         }
@@ -77,7 +78,7 @@ extension StatisticsView {
         // segmented control
         segmentedControl.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(titleLabel.snp.bottom).offset(31)
+            make.top.equalTo(screenTitleLabel.snp.bottom).offset(31)
             make.width.equalTo(self.layoutMarginsGuide.snp.width)
         }
         
@@ -89,7 +90,7 @@ extension StatisticsView {
         
         // table
         statisticsTable.snp.makeConstraints { make in
-            make.top.equalTo(exersicesLabel.snp.bottom).offset(5)
+            make.top.equalTo(exersicesLabel.snp.bottom).offset(-5)
             make.left.equalTo(self.layoutMarginsGuide.snp.left)
             make.right.equalTo(self.layoutMarginsGuide.snp.right)
             make.bottom.equalTo(self.layoutMarginsGuide.snp.bottom)
@@ -97,3 +98,15 @@ extension StatisticsView {
 
     }
 }
+
+// MARK: - Live Preview
+
+#if DEBUG
+import SwiftUI
+
+struct StatisticsView_Preview: PreviewProvider {
+    static var previews: some View {
+        StatisticsView().showPreview()
+    }
+}
+#endif

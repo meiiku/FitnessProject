@@ -157,3 +157,14 @@ extension HomeScreenView {
         }
     }
 }
+
+// MARK: - Live Preview
+#if DEBUG
+import SwiftUI
+
+struct HomeScreenView_Preview: PreviewProvider {
+    static var previews: some View {
+        HomeScreenView().showPreview()
+    }
+}
+#endif
