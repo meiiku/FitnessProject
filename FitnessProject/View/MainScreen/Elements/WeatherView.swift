@@ -41,8 +41,8 @@ class WeatherView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupViews()
-        setupConstraints()
+        setViews()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -52,7 +52,7 @@ class WeatherView: UIView {
 
 extension WeatherView {
     
-    private func setupViews() {
+    private func setViews() {
         self.backgroundColor = Constants.whiteColor
         self.layer.cornerRadius = 10
         
@@ -67,7 +67,7 @@ extension WeatherView {
         self.addSubview(weatherIcon)
     }
     
-    private func setupConstraints() {
+    private func setConstraints() {
         
         // status of weather
         weatherStatusLabel.snp.makeConstraints { make in

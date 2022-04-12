@@ -30,7 +30,7 @@ class HomeScreenView: UIView {
         return label
     }()
     
-    private lazy var addWorkoutButton: UIButton = {
+    lazy var addWorkoutButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = Constants.secondaryColor
         button.layer.cornerRadius = 10
@@ -38,7 +38,7 @@ class HomeScreenView: UIView {
         button.titleLabel?.font = .robotoMedium12()
         button.titleLabel?.textColor = .black
         // image
-        button.setImage(UIImage(named: "addWorkout"), for: .normal)
+        button.setImage(UIImage(named: "addWorkoutButton"), for: .normal)
         button.tintColor = Constants.secondaryColor
         button.imageEdgeInsets = UIEdgeInsets(top: -5, left: 20, bottom: 10, right: 0)
         button.titleEdgeInsets = UIEdgeInsets(top: 50, left: -40, bottom: 0, right: 0)
@@ -49,7 +49,6 @@ class HomeScreenView: UIView {
         button.layer.shadowRadius = 4
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         
-        button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -80,12 +79,6 @@ class HomeScreenView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    // MARK: - Methods
-    
-    @objc private func addWorkoutButtonTapped() {
-        print("Add Workout button tapped")
     }
 }
 
@@ -158,13 +151,3 @@ extension HomeScreenView {
     }
 }
 
-// MARK: - Live Preview
-#if DEBUG
-import SwiftUI
-
-struct HomeScreenView_Preview: PreviewProvider {
-    static var previews: some View {
-        HomeScreenView().showPreview()
-    }
-}
-#endif

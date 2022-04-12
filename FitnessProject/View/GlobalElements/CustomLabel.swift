@@ -10,20 +10,26 @@ import UIKit
 class CustomLabel: UILabel {
     
     enum LabelType {
-        case title
+        case screenTitle
         case comment
+        case largeAnnotation
+        case smallAnnotation
         
         fileprivate func getLabelTextColor() -> UIColor {
             switch self {
-            case .title: return Constants.primaryLabelColor
+            case .screenTitle: return Constants.primaryLabelColor
             case .comment: return Constants.commentLabelColor
+            case .largeAnnotation: return Constants.primaryLabelColor
+            case .smallAnnotation: return Constants.primaryLabelColor
             }
         }
         
         fileprivate func getLabelFont() -> UIFont? {
             switch self {
-            case .title: return .robotoMedium24()
+            case .screenTitle: return .robotoMedium24()
             case .comment: return .robotoMedium14()
+            case .largeAnnotation: return .robotoMedium24()
+            case .smallAnnotation: return .robotoMedium18()
             }
         }
     }

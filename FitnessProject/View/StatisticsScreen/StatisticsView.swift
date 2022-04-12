@@ -14,7 +14,7 @@ class StatisticsView: UIView {
     
     // screen title
     private lazy var screenTitleLabel: CustomLabel = {
-        let label = CustomLabel(text: "STATISTICS", type: .title)
+        let label = CustomLabel(text: "STATISTICS", type: .screenTitle)
         return label
     }()
 
