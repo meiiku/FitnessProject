@@ -22,7 +22,6 @@ class NewWorkoutController: UIViewController {
     
     private func setMethods() {
         newWorkoutView.closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-//        newWorkoutView.sliderOfSets.addTarget(self, action: #selector(sliderOfSetsValueChanged), for: .touchUpInside)
     }
     
     // method for close button

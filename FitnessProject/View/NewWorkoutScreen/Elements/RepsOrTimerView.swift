@@ -71,12 +71,14 @@ class RepsOrTimerView: UIView {
     // timer label
     private lazy var timerLabel: CustomLabel = {
         let label = CustomLabel(text: "Timer", type: .smallAnnotation)
+        label.isEnabled = false
         return label
     }()
     
     // timer counter label
     private lazy var timerCounterLabel: CustomLabel = {
         let label = CustomLabel(text: "1 min 30 sec", type: .largeAnnotation)
+        label.isEnabled = false
         return label
     }()
     
@@ -87,6 +89,7 @@ class RepsOrTimerView: UIView {
         slider.maximumValue = 5
         slider.value = 1.5
         slider.minimumTrackTintColor = Constants.primaryColor
+        slider.isEnabled = false
         return slider
     }()
     
