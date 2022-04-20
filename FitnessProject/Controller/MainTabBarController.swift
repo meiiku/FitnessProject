@@ -42,14 +42,3 @@ class MainTabBarController: UITabBarController {
         items[1].image = UIImage(named: "statisticsTabBar")
     }
 }
-
-#if DEBUG
-import SwiftUI
- 
-struct MainTabBarController_Preview: PreviewProvider {
-    static var previews: some View {
-        MainTabBarController().showPreview()
-    }
-}
-#endif
-

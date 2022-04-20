@@ -98,15 +98,3 @@ extension StatisticsView {
 
     }
 }
-
-// MARK: - Live Preview
-
-#if DEBUG
-import SwiftUI
-
-struct StatisticsView_Preview: PreviewProvider {
-    static var previews: some View {
-        StatisticsView().showPreview()
-    }
-}
-#endif

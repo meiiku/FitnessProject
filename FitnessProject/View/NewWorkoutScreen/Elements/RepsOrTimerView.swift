@@ -25,13 +25,13 @@ class RepsOrTimerView: UIView {
     }()
     
     // sets counter label
-    private lazy var setsCounterLabel: CustomLabel = {
+    lazy var setsCounterLabel: CustomLabel = {
         let label = CustomLabel(text: "4", type: .largeAnnotation)
         return label
     }()
     
     // sets slider
-    lazy var sliderOfSets: UISlider = {
+    lazy var setsSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 0
         slider.maximumValue = 10
@@ -47,19 +47,19 @@ class RepsOrTimerView: UIView {
     }()
     
     // Reps label
-    private lazy var repsLabel: CustomLabel = {
+    lazy var repsLabel: CustomLabel = {
         let label = CustomLabel(text: "Reps", type: .smallAnnotation)
         return label
     }()
     
     // sets counter label
-    private lazy var repsCounterLabel: CustomLabel = {
+    lazy var repsCounterLabel: CustomLabel = {
         let label = CustomLabel(text: "10", type: .largeAnnotation)
         return label
     }()
     
     // reps slider
-    lazy var sliderOfReps: UISlider = {
+    lazy var repsSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 0
         slider.maximumValue = 10
@@ -69,27 +69,24 @@ class RepsOrTimerView: UIView {
     }()
     
     // timer label
-    private lazy var timerLabel: CustomLabel = {
+    lazy var timerLabel: CustomLabel = {
         let label = CustomLabel(text: "Timer", type: .smallAnnotation)
-        label.isEnabled = false
         return label
     }()
     
     // timer counter label
-    private lazy var timerCounterLabel: CustomLabel = {
+    lazy var timerCounterLabel: CustomLabel = {
         let label = CustomLabel(text: "1 min 30 sec", type: .largeAnnotation)
-        label.isEnabled = false
         return label
     }()
     
     // time slider
-    lazy var sliderOfTime: UISlider = {
+    lazy var timerSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 0
-        slider.maximumValue = 5
-        slider.value = 1.5
+        slider.maximumValue = 10
+        slider.value = 150
         slider.minimumTrackTintColor = Constants.primaryColor
-        slider.isEnabled = false
         return slider
     }()
     
@@ -104,6 +101,23 @@ class RepsOrTimerView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Methods
+    
+    
+    // gets data from UI-elements to send it to controller
+    private func getData() -> (Int, Int, Int) {
+        let setsSliderValue = Int(setsSlider.value)
+        let repsSliderValue = Int(repsSlider.value)
+        let timerSliderValue = Int(timerSlider.value)
+        
+        return (setsSliderValue, repsSliderValue, timerSliderValue)
+    }
+    
+    // function for sending data to controller
+    public func sendData() -> (Int, Int, Int) {
+        getData()
+    }
 }
 
 // MARK: - Setup, Constraints
@@ -114,14 +128,14 @@ extension RepsOrTimerView {
         self.addSubview(repsOrTimerBackground)
         repsOrTimerBackground.addSubview(setsLabel)
         repsOrTimerBackground.addSubview(setsCounterLabel)
-        repsOrTimerBackground.addSubview(sliderOfSets)
+        repsOrTimerBackground.addSubview(setsSlider)
         repsOrTimerBackground.addSubview(repeatOrTimerLAbel)
         repsOrTimerBackground.addSubview(repsLabel)
         repsOrTimerBackground.addSubview(repsCounterLabel)
-        repsOrTimerBackground.addSubview(sliderOfReps)
+        repsOrTimerBackground.addSubview(repsSlider)
         repsOrTimerBackground.addSubview(timerLabel)
         repsOrTimerBackground.addSubview(timerCounterLabel)
-        repsOrTimerBackground.addSubview(sliderOfTime)
+        repsOrTimerBackground.addSubview(timerSlider)
     }
     
     func setConstraints() {
@@ -144,7 +158,7 @@ extension RepsOrTimerView {
         }
         
         // sets slider
-        sliderOfSets.snp.makeConstraints { make in
+        setsSlider.snp.makeConstraints { make in
             make.top.equalTo(setsLabel.snp.bottom).offset(5)
             make.left.equalTo(setsLabel)
             make.right.equalTo(setsCounterLabel)
@@ -152,7 +166,7 @@ extension RepsOrTimerView {
         
         // repeatOrTimerLAbel
         repeatOrTimerLAbel.snp.makeConstraints { make in
-            make.top.equalTo(sliderOfSets.snp.bottom).offset(15)
+            make.top.equalTo(setsSlider.snp.bottom).offset(15)
             make.centerX.equalToSuperview()
         }
         
@@ -169,7 +183,7 @@ extension RepsOrTimerView {
         }
         
         // reps slider
-        sliderOfReps.snp.makeConstraints { make in
+        repsSlider.snp.makeConstraints { make in
             make.top.equalTo(repsLabel.snp.bottom).offset(5)
             make.left.equalTo(repsLabel)
             make.right.equalTo(repsCounterLabel)
@@ -177,7 +191,7 @@ extension RepsOrTimerView {
         
         // timer label
         timerLabel.snp.makeConstraints { make in
-            make.top.equalTo(sliderOfReps.snp.bottom).offset(30)
+            make.top.equalTo(repsSlider.snp.bottom).offset(30)
             make.left.equalTo(repsLabel)
         }
         
@@ -188,7 +202,7 @@ extension RepsOrTimerView {
         }
         
         // time slider
-        sliderOfTime.snp.makeConstraints { make in
+        timerSlider.snp.makeConstraints { make in
             make.top.equalTo(timerLabel.snp.bottom).offset(5)
             make.left.equalTo(timerLabel)
             make.right.equalTo(timerCounterLabel)

@@ -50,13 +50,13 @@ class NewWorkoutView: UIView {
     }()
     
     // save button
-    private lazy var saveButton: CustomButton = {
+    lazy var saveButton: CustomButton = {
         let button = CustomButton(text: "SAVE", color: .green)
         return button
     }()
     
-    private lazy var dateAndRepeatView = DateAndRepeatView()
-    private lazy var repsOrTimerView = RepsOrTimerView()
+    lazy var dateAndRepeatView = DateAndRepeatView()
+    lazy var repsOrTimerView = RepsOrTimerView()
     
     // MARK: - init
     
@@ -65,10 +65,17 @@ class NewWorkoutView: UIView {
         
         setViews()
         setConstraints()
+        setMethods()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Methods
+    
+    private func setMethods() {
+        
     }
 }
 
@@ -160,15 +167,3 @@ extension NewWorkoutView {
         }
     }
 }
-
-// MARK: - Live Preview
-
-#if DEBUG
-import SwiftUI
-
-struct NewWorkoutView_Preview: PreviewProvider {
-    static var previews: some View {
-        NewWorkoutView().showPreview()
-    }
-}
-#endif

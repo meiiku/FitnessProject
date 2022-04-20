@@ -44,17 +44,9 @@ class DateAndRepeatView: UIView {
         repeatSwitch.onTintColor = Constants.primaryColor
         return repeatSwitch
     }()
-    //
-    //    // sets slider
-    //    lazy var sliderOfSets: UISlider = {
-    //        let slider = UISlider()
-    //        slider.minimumValue = 0
-    //        slider.maximumValue = 10
-    //        slider.minimumTrackTintColor = Constants.primaryColor
-    //        return slider
-    //    }()
-    //
+
     // MARK: - init
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -65,8 +57,22 @@ class DateAndRepeatView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Methods
+    
+    
+    // gets data from UI-elements to send it to controller
+    private func getData() -> (Date, Bool) {
+        return (datePicker.date, repeatSwitch.isOn)
+    }
+    
+    // function for sending data to controller
+    public func sendData() -> (Date, Bool) {
+        getData()
+    }
 }
 
+// MARK: - Set Views, Constraints
 extension DateAndRepeatView {
     
     func setViews() {
