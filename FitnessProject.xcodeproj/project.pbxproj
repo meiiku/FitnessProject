@@ -17,7 +17,6 @@
 		9F61E57C280A073D00322D8B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61E57B280A073D00322D8B /* RealmManager.swift */; };
 		9F8FBDB3280C63B60000DDED /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FBDB2280C63B60000DDED /* Date + Extensions.swift */; };
 		9F8FBDB6280C6CED0000DDED /* StartWorkoutWithImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FBDB5280C6CED0000DDED /* StartWorkoutWithImageController.swift */; };
-		9F8FBDB8280C6D740000DDED /* StartNewWorkoutWithImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FBDB7280C6D740000DDED /* StartNewWorkoutWithImageView.swift */; };
 		9F8FBDBB280C732B0000DDED /* CurrentExerciseSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FBDBA280C732B0000DDED /* CurrentExerciseSettingsView.swift */; };
 		9F8FBDBD280C7A1C0000DDED /* StartWorkoutWithTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FBDBC280C7A1C0000DDED /* StartWorkoutWithTimerController.swift */; };
 		9F8FBDC0280C7A7A0000DDED /* StartNewWorkoutWithTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FBDBF280C7A7A0000DDED /* StartNewWorkoutWithTimerView.swift */; };
@@ -45,9 +44,13 @@
 		9FD6E2DA280383240077E8CE /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6E2D9280383240077E8CE /* StatisticsTableViewCell.swift */; };
 		9FFD31E627FDCC9900ABDB77 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD31E527FDCC9900ABDB77 /* CalendarView.swift */; };
 		9FFD31EA27FDD31000ABDB77 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD31E927FDD31000ABDB77 /* CustomButton.swift */; };
+		D9636282C7F8495BB62C6E45 /* Pods_FitnessProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6403B6792D0189862B2B46 /* Pods_FitnessProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E301ED6D0C85EEBE56E4714 /* Pods-FitnessProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessProject.debug.xcconfig"; path = "Target Support Files/Pods-FitnessProject/Pods-FitnessProject.debug.xcconfig"; sourceTree = "<group>"; };
+		4E6403B6792D0189862B2B46 /* Pods_FitnessProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E2E495DAF76209B406A0701 /* Pods-FitnessProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessProject.release.xcconfig"; path = "Target Support Files/Pods-FitnessProject/Pods-FitnessProject.release.xcconfig"; sourceTree = "<group>"; };
 		9F13204327FC8B6100688CB7 /* FitnessProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F13204627FC8B6100688CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F13204827FC8B6100688CB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		9F61E57B280A073D00322D8B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		9F8FBDB2280C63B60000DDED /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		9F8FBDB5280C6CED0000DDED /* StartWorkoutWithImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutWithImageController.swift; sourceTree = "<group>"; };
-		9F8FBDB7280C6D740000DDED /* StartNewWorkoutWithImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNewWorkoutWithImageView.swift; sourceTree = "<group>"; };
 		9F8FBDBA280C732B0000DDED /* CurrentExerciseSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentExerciseSettingsView.swift; sourceTree = "<group>"; };
 		9F8FBDBC280C7A1C0000DDED /* StartWorkoutWithTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutWithTimerController.swift; sourceTree = "<group>"; };
 		9F8FBDBF280C7A7A0000DDED /* StartNewWorkoutWithTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNewWorkoutWithTimerView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9636282C7F8495BB62C6E45 /* Pods_FitnessProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +107,18 @@
 		55775109AA9CF77276D7DA90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				3E301ED6D0C85EEBE56E4714 /* Pods-FitnessProject.debug.xcconfig */,
+				9E2E495DAF76209B406A0701 /* Pods-FitnessProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C1152652AAC93B0EC1E34CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E6403B6792D0189862B2B46 /* Pods_FitnessProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9F13203A27FC8B6000688CB7 = {
@@ -114,6 +127,7 @@
 				9F13204527FC8B6100688CB7 /* FitnessProject */,
 				9F13204427FC8B6100688CB7 /* Products */,
 				55775109AA9CF77276D7DA90 /* Pods */,
+				9C1152652AAC93B0EC1E34CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,8 +160,8 @@
 				9F13204A27FC8B6100688CB7 /* HomeScreenController.swift */,
 				9FD6E2D028037A730077E8CE /* StatisticsViewController.swift */,
 				9FA3E5F628061DBA00B8F276 /* NewWorkoutController.swift */,
-				9F8FBDB5280C6CED0000DDED /* StartWorkoutWithImageController.swift */,
 				9F8FBDBC280C7A1C0000DDED /* StartWorkoutWithTimerController.swift */,
+				9F8FBDB5280C6CED0000DDED /* StartWorkoutWithImageController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,8 +172,8 @@
 				9F4F308B27FE1E1A009DAA10 /* MainScreen */,
 				9FD6E2D228037A9D0077E8CE /* StatisticsScreen */,
 				9FA3E5F828061DD700B8F276 /* NewWorkoutScreen */,
-				9F8FBDB4280C6CC00000DDED /* StartWorkoutWithImageView */,
 				9F8FBDBE280C7A490000DDED /* StartWorkoutWithTimerView */,
+				9F8FBDB4280C6CC00000DDED /* StartWorkoutWithImageView */,
 				9FFD31E727FDCCF900ABDB77 /* GlobalElements */,
 			);
 			path = View;
@@ -215,7 +229,6 @@
 		9F8FBDB4280C6CC00000DDED /* StartWorkoutWithImageView */ = {
 			isa = PBXGroup;
 			children = (
-				9F8FBDB7280C6D740000DDED /* StartNewWorkoutWithImageView.swift */,
 				9F8FBDB9280C72FD0000DDED /* Elements */,
 			);
 			path = StartWorkoutWithImageView;
@@ -346,9 +359,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F13205727FC8B6100688CB7 /* Build configuration list for PBXNativeTarget "FitnessProject" */;
 			buildPhases = (
+				8F6664D4F0D7F16594518DC1 /* [CP] Check Pods Manifest.lock */,
 				9F13203F27FC8B6000688CB7 /* Sources */,
 				9F13204027FC8B6000688CB7 /* Frameworks */,
 				9F13204127FC8B6000688CB7 /* Resources */,
+				3828F5C02B02C5FBA89B944A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -406,6 +421,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3828F5C02B02C5FBA89B944A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessProject/Pods-FitnessProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FitnessProject/Pods-FitnessProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FitnessProject/Pods-FitnessProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F6664D4F0D7F16594518DC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitnessProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F13203F27FC8B6000688CB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -420,7 +477,6 @@
 				9FFD31EA27FDD31000ABDB77 /* CustomButton.swift in Sources */,
 				9FD359BC2806335E00F1C34B /* CustomForegroundView.swift in Sources */,
 				9F9A369628030EB600126D89 /* CustomLabel.swift in Sources */,
-				9F8FBDB8280C6D740000DDED /* StartNewWorkoutWithImageView.swift in Sources */,
 				9FC75A6B27FCA97400BE7BAC /* Constants.swift in Sources */,
 				9F8FBDBD280C7A1C0000DDED /* StartWorkoutWithTimerController.swift in Sources */,
 				9F8FBDB6280C6CED0000DDED /* StartWorkoutWithImageController.swift in Sources */,
@@ -578,6 +634,7 @@
 		};
 		9F13205827FC8B6100688CB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E301ED6D0C85EEBE56E4714 /* Pods-FitnessProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -605,6 +662,7 @@
 		};
 		9F13205927FC8B6100688CB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E2E495DAF76209B406A0701 /* Pods-FitnessProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
