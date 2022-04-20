@@ -27,7 +27,6 @@
 		9F9FEE9D2800BAD5003A4781 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9FEE9B2800BAD5003A4781 /* Roboto-Bold.ttf */; };
 		9F9FEEA02800BE74003A4781 /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FEE9F2800BE74003A4781 /* UIFont + Extensions.swift */; };
 		9FA3E5F728061DBA00B8F276 /* NewWorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3E5F628061DBA00B8F276 /* NewWorkoutController.swift */; };
-		9FA3E5FA28061E0200B8F276 /* NewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3E5F928061E0200B8F276 /* NewWorkoutView.swift */; };
 		9FA3E5FC2806229800B8F276 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3E5FB2806229800B8F276 /* CustomTextField.swift */; };
 		9FB035A52804991E009436B4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB035A42804991E009436B4 /* MainTabBarController.swift */; };
 		9FC75A6927FCA91100BE7BAC /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */; };
@@ -72,7 +71,6 @@
 		9F9FEE9B2800BAD5003A4781 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		9F9FEE9F2800BE74003A4781 /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
 		9FA3E5F628061DBA00B8F276 /* NewWorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutController.swift; sourceTree = "<group>"; };
-		9FA3E5F928061E0200B8F276 /* NewWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutView.swift; sourceTree = "<group>"; };
 		9FA3E5FB2806229800B8F276 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9FB035A42804991E009436B4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 		9FA3E5F828061DD700B8F276 /* NewWorkoutScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9FA3E5F928061E0200B8F276 /* NewWorkoutView.swift */,
 				9FD359B8280632FF00F1C34B /* Elements */,
 			);
 			path = NewWorkoutScreen;
@@ -469,7 +466,6 @@
 				9F9FEEA02800BE74003A4781 /* UIFont + Extensions.swift in Sources */,
 				9F9A3698280311A600126D89 /* ExercisesTableView.swift in Sources */,
 				9FD359BA2806331900F1C34B /* DateAndRepeatView.swift in Sources */,
-				9FA3E5FA28061E0200B8F276 /* NewWorkoutView.swift in Sources */,
 				9FFD31EA27FDD31000ABDB77 /* CustomButton.swift in Sources */,
 				9FD359BC2806335E00F1C34B /* CustomForegroundView.swift in Sources */,
 				9F9A369628030EB600126D89 /* CustomLabel.swift in Sources */,
