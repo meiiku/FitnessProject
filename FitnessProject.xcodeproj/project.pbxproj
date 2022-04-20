@@ -29,7 +29,6 @@
 		9FA3E5F728061DBA00B8F276 /* NewWorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3E5F628061DBA00B8F276 /* NewWorkoutController.swift */; };
 		9FA3E5FC2806229800B8F276 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA3E5FB2806229800B8F276 /* CustomTextField.swift */; };
 		9FB035A52804991E009436B4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB035A42804991E009436B4 /* MainTabBarController.swift */; };
-		9FC75A6927FCA91100BE7BAC /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */; };
 		9FC75A6B27FCA97400BE7BAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC75A6A27FCA97400BE7BAC /* Constants.swift */; };
 		9FD359BA2806331900F1C34B /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD359B92806331900F1C34B /* DateAndRepeatView.swift */; };
 		9FD359BC2806335E00F1C34B /* CustomForegroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD359BB2806335E00F1C34B /* CustomForegroundView.swift */; };
@@ -72,7 +71,6 @@
 		9FA3E5F628061DBA00B8F276 /* NewWorkoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutController.swift; sourceTree = "<group>"; };
 		9FA3E5FB2806229800B8F276 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		9FB035A42804991E009436B4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		9FC75A6A27FCA97400BE7BAC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FD359B92806331900F1C34B /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
 		9FD359BB2806335E00F1C34B /* CustomForegroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForegroundView.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 		9F4F308B27FE1E1A009DAA10 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9FC75A6827FCA91100BE7BAC /* HomeScreenView.swift */,
 				9F9B094A2800ED1A0055B15F /* Cells */,
 				9F9B09492800ECFA0055B15F /* Elements */,
 			);
@@ -485,7 +482,6 @@
 				9FA3E5F728061DBA00B8F276 /* NewWorkoutController.swift in Sources */,
 				9F13204927FC8B6100688CB7 /* SceneDelegate.swift in Sources */,
 				9F8FBDC3280C7FF60000DDED /* CurrentExerciseSettingsWithTimerView.swift in Sources */,
-				9FC75A6927FCA91100BE7BAC /* HomeScreenView.swift in Sources */,
 				9FA3E5FC2806229800B8F276 /* CustomTextField.swift in Sources */,
 				9F4F308D27FE1E2E009DAA10 /* WeatherView.swift in Sources */,
 				9FD6E2D7280381420077E8CE /* StatisticsTableView.swift in Sources */,

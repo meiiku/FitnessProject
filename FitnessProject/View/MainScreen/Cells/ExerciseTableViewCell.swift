@@ -24,7 +24,8 @@ class ExerciseTableViewCell: UITableViewCell {
         imageView.layer.cornerRadius = 20
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "exerciseImage_Biceps")?.withRenderingMode(.alwaysTemplate)
+        imageView.image = UIImage(named: "ExerciseImage_Biceps")?.withRenderingMode(.alwaysTemplate)
+//        imageView.backgroundColor = .red
         return imageView
     }()
     
