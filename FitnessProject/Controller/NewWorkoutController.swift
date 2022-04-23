@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class NewWorkoutController: UIViewController {
     
@@ -23,9 +22,6 @@ class NewWorkoutController: UIViewController {
         private lazy var setsCounterLabel = repsOrTimerView.setsCounterLabel
         private lazy var repsCounterLabel = repsOrTimerView.repsCounterLabel
         private lazy var timerCounterLabel = repsOrTimerView.timerCounterLabel
-    //
-    //    private lazy var name = newWorkoutView.nameTextField
-    //    private lazy var saveButton = newWorkoutView.saveButton
     
     // MARK: - UI Elements
     
@@ -82,7 +78,9 @@ class NewWorkoutController: UIViewController {
         
         setViews()
         setConstraints()
+        setDelegate()
         setMethods()
+        addTaps()
     }
     
     // MARK: - Methods
@@ -97,6 +95,10 @@ class NewWorkoutController: UIViewController {
         setsSlider.addTarget(self, action: #selector(setsSliderChanged), for: .valueChanged)
         repsSlider.addTarget(self, action: #selector(repsSliderChanged), for: .valueChanged)
         timerSlider.addTarget(self, action: #selector(timerSliderChanged), for: .valueChanged)
+    }
+    
+    private func setDelegate() {
+        nameTextField.delegate = self
     }
     
     // method for close button
@@ -154,9 +156,26 @@ class NewWorkoutController: UIViewController {
         workoutModel = WorkoutModel()
     }
     
+    // hiding keyboard
+    private func addTaps() {
+        
+        // by tapping out of TextField
+        let tapScreen = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapScreen)
+        
+        // by swiping sliders
+        let swipeScreen = UISwipeGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        swipeScreen.cancelsTouchesInView = false
+        view.addGestureRecognizer(swipeScreen)
+    }
+    
+    @objc private func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
     // MARK: - Realm
     
-    private let localRealm = try! Realm()
+//    private let localRealm = try! Realm()
     private var workoutModel = WorkoutModel()
     private let testImage = UIImage(named: "exerciseImage_Biceps")
     
@@ -270,5 +289,15 @@ extension NewWorkoutController {
             make.height.equalTo(55)
         }
     }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension NewWorkoutController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+    }
+    
 }
 

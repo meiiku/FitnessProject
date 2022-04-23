@@ -60,7 +60,6 @@ class DateAndRepeatView: UIView {
     
     // MARK: - Methods
     
-    
     // gets data from UI-elements to send it to controller
     private func getData() -> (Date, Bool) {
         return (datePicker.date, repeatSwitch.isOn)
