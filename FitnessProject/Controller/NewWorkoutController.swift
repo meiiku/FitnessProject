@@ -152,8 +152,29 @@ class NewWorkoutController: UIViewController {
     @objc private func saveButtonTapped() {
         print("saveButtonTapped")
         setModel()
-        RealmManager.shared.saveWorkoutModel(model: workoutModel)
-        workoutModel = WorkoutModel()
+        saveModel()
+        
+//        RealmManager.shared.saveWorkoutModel(model: workoutModel)
+//        workoutModel = WorkoutModel()
+    }
+    
+    private func saveModel() {
+        guard let text = nameTextField.text else { return }
+        
+        // counting symbols exluding spaces
+        let count = text.filter { $0.isNumber || $0.isLetter }.count
+        
+        // if workout name contains at least one symbol and sets > 0 and reps/timer > 0 then save model
+        if count != 0 &&
+            workoutModel.workoutSets != 0 &&
+            (workoutModel.workoutReps != 0 || workoutModel.workoutTimer != 0) {
+            
+            RealmManager.shared.saveWorkoutModel(model: workoutModel)
+            workoutModel = WorkoutModel()
+            showAlert(title: "Workout has been saved", message: nil)
+        } else {
+            showAlert(title: "Error", message: "Enter name and reps/timer")
+        }
     }
     
     // hiding keyboard

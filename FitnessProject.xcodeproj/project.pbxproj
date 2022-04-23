@@ -12,6 +12,7 @@
 		9F13204B27FC8B6100688CB7 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13204A27FC8B6100688CB7 /* HomeScreenController.swift */; };
 		9F13205027FC8B6100688CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F13204F27FC8B6100688CB7 /* Assets.xcassets */; };
 		9F13205327FC8B6100688CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F13205127FC8B6100688CB7 /* LaunchScreen.storyboard */; };
+		9F1CD93B28143E4600F4EC92 /* UIViewController + Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1CD93A28143E4600F4EC92 /* UIViewController + Alerts.swift */; };
 		9F4F308D27FE1E2E009DAA10 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F308C27FE1E2E009DAA10 /* WeatherView.swift */; };
 		9F61E579280A054B00322D8B /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61E578280A054B00322D8B /* WorkoutModel.swift */; };
 		9F61E57C280A073D00322D8B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61E57B280A073D00322D8B /* RealmManager.swift */; };
@@ -54,6 +55,7 @@
 		9F13204F27FC8B6100688CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F13205227FC8B6100688CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F13205427FC8B6100688CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F1CD93A28143E4600F4EC92 /* UIViewController + Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alerts.swift"; sourceTree = "<group>"; };
 		9F4F308C27FE1E2E009DAA10 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		9F61E578280A054B00322D8B /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		9F61E57B280A073D00322D8B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				9F9FEE9F2800BE74003A4781 /* UIFont + Extensions.swift */,
 				9FD6E2CE280352DB0077E8CE /* UIStackView + Extensions.swift */,
 				9F8FBDB2280C63B60000DDED /* Date + Extensions.swift */,
+				9F1CD93A28143E4600F4EC92 /* UIViewController + Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				9FA3E5FC2806229800B8F276 /* CustomTextField.swift in Sources */,
 				9F4F308D27FE1E2E009DAA10 /* WeatherView.swift in Sources */,
 				9FD6E2D7280381420077E8CE /* StatisticsTableView.swift in Sources */,
+				9F1CD93B28143E4600F4EC92 /* UIViewController + Alerts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

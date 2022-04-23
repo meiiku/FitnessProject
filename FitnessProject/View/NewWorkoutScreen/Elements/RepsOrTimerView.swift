@@ -26,7 +26,7 @@ class RepsOrTimerView: UIView {
     
     // sets counter label
     lazy var setsCounterLabel: CustomLabel = {
-        let label = CustomLabel(text: "4", type: .largeAnnotation)
+        let label = CustomLabel(text: "2", type: .largeAnnotation)
         return label
     }()
     
@@ -54,7 +54,7 @@ class RepsOrTimerView: UIView {
     
     // sets counter label
     lazy var repsCounterLabel: CustomLabel = {
-        let label = CustomLabel(text: "10", type: .largeAnnotation)
+        let label = CustomLabel(text: "0", type: .largeAnnotation)
         return label
     }()
     
@@ -63,7 +63,7 @@ class RepsOrTimerView: UIView {
         let slider = UISlider()
         slider.minimumValue = 0
         slider.maximumValue = 10
-        slider.value = 10
+        slider.value = 0
         slider.minimumTrackTintColor = Constants.primaryColor
         return slider
     }()
@@ -76,7 +76,7 @@ class RepsOrTimerView: UIView {
     
     // timer counter label
     lazy var timerCounterLabel: CustomLabel = {
-        let label = CustomLabel(text: "1 min 30 sec", type: .largeAnnotation)
+        let label = CustomLabel(text: "0 min", type: .largeAnnotation)
         return label
     }()
     
@@ -85,7 +85,7 @@ class RepsOrTimerView: UIView {
         let slider = UISlider()
         slider.minimumValue = 0
         slider.maximumValue = 10
-        slider.value = 150
+        slider.value = 0
         slider.minimumTrackTintColor = Constants.primaryColor
         return slider
     }()
