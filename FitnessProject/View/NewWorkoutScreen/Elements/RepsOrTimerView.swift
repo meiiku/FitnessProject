@@ -118,6 +118,20 @@ class RepsOrTimerView: UIView {
     public func sendData() -> (Int, Int, Int) {
         getData()
     }
+    
+    // sets elements to default state
+    private func refreshObjects() {
+        setsSlider.value = 0
+        setsCounterLabel.text = "0"
+        repsSlider.value = 0
+        repsCounterLabel.text = "0"
+        timerSlider.value = 0
+        timerCounterLabel.text = "0"
+    }
+    
+    public func refreshslidersAndLabels() {
+        refreshObjects()
+    }
 }
 
 // MARK: - Setup, Constraints

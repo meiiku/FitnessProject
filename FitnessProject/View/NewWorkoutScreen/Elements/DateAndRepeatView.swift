@@ -69,6 +69,16 @@ class DateAndRepeatView: UIView {
     public func sendData() -> (Date, Bool) {
         getData()
     }
+    
+    // sets datePicker and switch to default state
+    private func refreshObjects() {
+        datePicker.setDate(Date(), animated: true)
+        repeatSwitch.isOn = true
+    }
+    
+    public func refreshDatePickerAndSwitch() {
+        refreshObjects()
+    }
 }
 
 // MARK: - Set Views, Constraints

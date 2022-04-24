@@ -153,6 +153,7 @@ class NewWorkoutController: UIViewController {
         print("saveButtonTapped")
         setModel()
         saveModel()
+        refreshObjects()
         
 //        RealmManager.shared.saveWorkoutModel(model: workoutModel)
 //        workoutModel = WorkoutModel()
@@ -175,6 +176,12 @@ class NewWorkoutController: UIViewController {
         } else {
             showAlert(title: "Error", message: "Enter name and reps/timer")
         }
+    }
+    
+    private func refreshObjects() {
+        dateAndRepeatView.refreshDatePickerAndSwitch()
+        repsOrTimerView.refreshslidersAndLabels()
+        nameTextField.text = ""
     }
     
     // hiding keyboard
