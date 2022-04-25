@@ -11,7 +11,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Elements
     
-    private lazy var dayOfWeek: UILabel = {
+    private lazy var dayOfWeekLabel: UILabel = {
         let label = UILabel()
         label.text = "We"
         label.textAlignment = .center
@@ -20,7 +20,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var numberOfDay: UILabel = {
+    private lazy var numberOfDayLabel: UILabel = {
         let label = UILabel()
         label.text = "14"
         label.textAlignment = .center
@@ -49,32 +49,42 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         didSet {
             if self.isSelected {
                 self.backgroundColor = Constants.secondaryColor
-                dayOfWeek.textColor = Constants.primaryLabelColor
-                numberOfDay.textColor = Constants.primaryLabelColor
+                dayOfWeekLabel.textColor = Constants.primaryLabelColor
+                numberOfDayLabel.textColor = Constants.primaryLabelColor
             } else {
                 self.backgroundColor = .none
-                dayOfWeek.textColor = Constants.whiteColor
-                numberOfDay.textColor = Constants.whiteColor
+                dayOfWeekLabel.textColor = Constants.whiteColor
+                numberOfDayLabel.textColor = Constants.whiteColor
             }
         }
+    }
+    
+    // sets the calendar to cells
+    private func configureCell(numberOfDay: String, weekday: String) {
+        numberOfDayLabel.text = numberOfDay
+        dayOfWeekLabel.text = weekday
+    }
+    
+    public func setDateToCells (numberOfDay: String, weekday: String) {
+        configureCell(numberOfDay: numberOfDay, weekday: weekday)
     }
     
     // MARK: - Setup, constraints
     
     private func setViews() {
         self.layer.cornerRadius = 10
-        self.addSubview(dayOfWeek)
-        self.addSubview(numberOfDay)
+        self.addSubview(dayOfWeekLabel)
+        self.addSubview(numberOfDayLabel)
     }
     
     private func setConstraints() {
         
-        dayOfWeek.snp.makeConstraints { make in
+        dayOfWeekLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(10)
         }
         
-        numberOfDay.snp.makeConstraints { make in
+        numberOfDayLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(-4)
         }

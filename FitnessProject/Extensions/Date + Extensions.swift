@@ -9,7 +9,9 @@ import Foundation
 
 extension Date {
     
-    // returns
+    // returns actual time and date
+    // (by default time is written like 3hrs before now, bc it returns GMT, besides moscow is GMT+3)
+    // so calculate the difference and returns correct value
     func localDate() -> Date {
         let timeZoneOffset = Double(TimeZone.current.secondsFromGMT(for: self))
         let localDate = Calendar.current.date(byAdding: .second, value: Int(timeZoneOffset), to: self) ?? Date()
@@ -51,5 +53,10 @@ extension Date {
         // creating number of weekday
         let weekday = calendar.component(.weekday, from: self)
         return weekday
+    }
+    
+    func offsetDay(days: Int) -> Date {
+        let offsetDate = Calendar.current.date(byAdding: .day, value: days, to: self) ?? Date()
+        return offsetDate
     }
 }

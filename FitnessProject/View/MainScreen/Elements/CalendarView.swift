@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SelectCollectionViewItemProtocol: AnyObject {
+    func selectItem(date: Date)
+}
+
 class CalendarView: UIView {
     
     
@@ -77,9 +81,24 @@ extension CalendarView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        // registering the cell
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: idCalendarCell, for: indexPath) as? CalendarCollectionViewCell
         else { return UICollectionViewCell() }
         self.layer.cornerRadius = 10
+        
+        // set calendar to cells
+        let dateTimeZone = Date().localDate()
+        let weekArray = dateTimeZone.getWeekArray()
+        
+        print(weekArray)
+        print(Date())
+        cell.setDateToCells(numberOfDay: weekArray[1][indexPath.item], weekday: weekArray[0][indexPath.item])
+        
+        // select current day-cell
+        if indexPath.item == 6 {
+            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .right)
+        }
         
         return cell
     }
